@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherSphere 🌍✨</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="weather-app">
+            <div class="app-header">
+                <h1>WeatherSphere <span class="glow">✨</span></h1>
+                <p class="tagline">Your personal weather oracle ☁️🔮</p>
+            </div>
+            
+            <div class="search-container">
+                <input type="text" id="location-input" placeholder="🌍 Enter city name..." class="glow-on-hover">
+                <button id="search-btn" class="glow-on-hover"><i class="fas fa-search-location"></i> Search</button>
+                <button id="current-location-btn" class="glow-on-hover"><i class="fas fa-location-crosshairs"></i> Use My Location</button>
+            </div>
+            
+            <div class="weather-display" id="weather-display">
+                <div class="weather-card glow-card">
+                    <div class="weather-main">
+                        <div class="weather-icon" id="weather-icon">🌞</div>
+                        <div class="temperature" id="temperature">--°C</div>
+                        <div class="weather-description" id="weather-description">Search for weather</div>
+                    </div>
+                    
+                    <div class="weather-details">
+                        <div class="detail-item">
+                            <span class="detail-icon">💧</span>
+                            <span class="detail-value" id="humidity">--%</span>
+                            <span class="detail-label">Humidity</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-icon">🌬️</span>
+                            <span class="detail-value" id="wind-speed">-- km/h</span>
+                            <span class="detail-label">Wind</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-icon">⏲️</span>
+                            <span class="detail-value" id="pressure">-- hPa</span>
+                            <span class="detail-label">Pressure</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="additional-info glow-card">
+                    <div class="info-item">
+                        <span class="info-label">Feels Like</span>
+                        <span class="info-value" id="feels-like">--°C</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Visibility</span>
+                        <span class="info-value" id="visibility">-- km</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Sunrise</span>
+                        <span class="info-value" id="sunrise">--:--</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Sunset</span>
+                        <span class="info-value" id="sunset">--:--</span>
+                    </div>
+                </div>
+                
+                <div class="forecast-container">
+                    <h3>5-Day Forecast <span class="glow">📅</span></h3>
+                    <div class="forecast-cards" id="forecast-cards">
+                        <!-- Forecast cards will be inserted here by JavaScript -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="fun-fact glow-card" id="fun-fact">
+                <p>Did you know? The highest temperature ever recorded was 56.7°C (134°F) in Death Valley, California in 1913! 🔥</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="particles" id="particles"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
